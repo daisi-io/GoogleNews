@@ -9,9 +9,11 @@ def get_news(query, num=10):
     
     print(f"total results: {len(googlenews.results())}")
     
-    return googlenews.results()[:int(num)]
-
-
+    results = googlenews.results()[:int(num)]
+    for r in results:
+        r["datetime"] = r["datetime"].strftime("%m/%d/%Y, %H")
+        
+    return results
 
 if __name__ == "__main__":
     res = get_news("apple")
