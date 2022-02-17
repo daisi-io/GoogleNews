@@ -19,10 +19,8 @@ def get_news(query, num=10):
         else:
             r["datetime"] = r["datetime"].strftime("%m/%d/%Y, %H")
     
-    response = [{"id": "book", "type": "json", "data": data}]
-    
-    return response
+    return {"result": data}
 
-if __name__ == "__main__":
-    res = get_news("apple")
-    print(res)
+    
+    
+    
