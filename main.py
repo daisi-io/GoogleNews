@@ -19,8 +19,4 @@ def get_news(query, num=10):
         else:
             r["datetime"] = r["datetime"].strftime("%m/%d/%Y, %H")
     
-    return {"result": data}
-
-    
-    
-    
+    return [{ "id": "gnews", "type": "json", "data": data}]
