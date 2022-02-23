@@ -1,5 +1,6 @@
 from GoogleNews import GoogleNews
 from datetime import datetime
+import pickle
 
 def get_news(query, num=10):
     print('paramters: ', query, num)
@@ -20,7 +21,3 @@ def get_news(query, num=10):
             r["datetime"] = r["datetime"].strftime("%m/%d/%Y, %H")
     
     return {"result": data}
-
-    
-    
-    
