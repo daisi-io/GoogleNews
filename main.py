@@ -1,5 +1,6 @@
 from GoogleNews import GoogleNews
 from datetime import datetime
+import pickle
 
 def get_news(query, num=10):
     print('paramters: ', query, num)
