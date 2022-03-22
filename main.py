@@ -21,9 +21,9 @@ def get_news(query, num=10):
         else:
             r["datetime"] = r["datetime"].strftime("%m/%d/%Y, %H")
     
-    df = pd.DataFrame(data) 
+    # df = pd.DataFrame(data) 
 
-    return df
+    # return df
 
 
-    # return {"result": data}
+    return {"result": data}
